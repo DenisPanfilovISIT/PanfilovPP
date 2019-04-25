@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/WcfServiceLibrary1/Service1/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/WcfServiceLibrary1/Service1/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/WcfServiceLibrary1/Service1/?xsd=xsd2" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_AllClients_InputMessage">
+    <wsdl:part name="parameters" element="tns:AllClients" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AllClients_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AllClientsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClient" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsClient" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DelClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:DelClient" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DelClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DelClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdClient" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AllZayavky_InputMessage">
+    <wsdl:part name="parameters" element="tns:AllZayavky" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AllZayavky_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AllZayavkyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetZayavka_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetZayavka" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetZayavka_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetZayavkaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsZayavka_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsZayavka" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsZayavka_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsZayavkaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DelZayavka_InputMessage">
+    <wsdl:part name="parameters" element="tns:DelZayavka" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DelZayavka_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DelZayavkaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdZayavka_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdZayavka" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdZayavka_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdZayavkaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AllUsluga_InputMessage">
+    <wsdl:part name="parameters" element="tns:AllUsluga" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AllUsluga_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AllUslugaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUsluga_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsluga" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUsluga_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUslugaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsUsluga_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsUsluga" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsUsluga_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsUslugaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DelUsluga_InputMessage">
+    <wsdl:part name="parameters" element="tns:DelUsluga" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DelUsluga_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DelUslugaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdUsluga_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdUsluga" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdUsluga_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdUslugaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AllZayavkyUslugy_InputMessage">
+    <wsdl:part name="parameters" element="tns:AllZayavkyUslugy" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AllZayavkyUslugy_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AllZayavkyUslugyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetZayavkaUsluga_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetZayavkaUsluga" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetZayavkaUsluga_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetZayavkaUslugaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsZayavkaUsluga_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsZayavkaUsluga" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsZayavkaUsluga_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsZayavkaUslugaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="AllClients">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AllClients" message="tns:IService1_AllClients_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AllClientsResponse" message="tns:IService1_AllClients_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetClient" message="tns:IService1_GetClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetClientResponse" message="tns:IService1_GetClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsClient" message="tns:IService1_InsClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsClientResponse" message="tns:IService1_InsClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DelClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DelClient" message="tns:IService1_DelClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DelClientResponse" message="tns:IService1_DelClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdClient" message="tns:IService1_UpdClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdClientResponse" message="tns:IService1_UpdClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AllZayavky">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AllZayavky" message="tns:IService1_AllZayavky_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AllZayavkyResponse" message="tns:IService1_AllZayavky_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetZayavka">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetZayavka" message="tns:IService1_GetZayavka_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetZayavkaResponse" message="tns:IService1_GetZayavka_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsZayavka">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsZayavka" message="tns:IService1_InsZayavka_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsZayavkaResponse" message="tns:IService1_InsZayavka_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DelZayavka">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DelZayavka" message="tns:IService1_DelZayavka_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DelZayavkaResponse" message="tns:IService1_DelZayavka_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdZayavka">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdZayavka" message="tns:IService1_UpdZayavka_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdZayavkaResponse" message="tns:IService1_UpdZayavka_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AllUsluga">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AllUsluga" message="tns:IService1_AllUsluga_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AllUslugaResponse" message="tns:IService1_AllUsluga_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsluga">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetUsluga" message="tns:IService1_GetUsluga_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetUslugaResponse" message="tns:IService1_GetUsluga_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsUsluga">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsUsluga" message="tns:IService1_InsUsluga_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsUslugaResponse" message="tns:IService1_InsUsluga_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DelUsluga">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DelUsluga" message="tns:IService1_DelUsluga_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DelUslugaResponse" message="tns:IService1_DelUsluga_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdUsluga">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdUsluga" message="tns:IService1_UpdUsluga_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdUslugaResponse" message="tns:IService1_UpdUsluga_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AllZayavkyUslugy">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AllZayavkyUslugy" message="tns:IService1_AllZayavkyUslugy_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AllZayavkyUslugyResponse" message="tns:IService1_AllZayavkyUslugy_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetZayavkaUsluga">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetZayavkaUsluga" message="tns:IService1_GetZayavkaUsluga_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetZayavkaUslugaResponse" message="tns:IService1_GetZayavkaUsluga_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsZayavkaUsluga">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsZayavkaUsluga" message="tns:IService1_InsZayavkaUsluga_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsZayavkaUslugaResponse" message="tns:IService1_InsZayavkaUsluga_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AllClients">
+      <soap:operation soapAction="http://tempuri.org/IService1/AllClients" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClient">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsClient">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelClient">
+      <soap:operation soapAction="http://tempuri.org/IService1/DelClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdClient">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllZayavky">
+      <soap:operation soapAction="http://tempuri.org/IService1/AllZayavky" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetZayavka">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetZayavka" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsZayavka">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsZayavka" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelZayavka">
+      <soap:operation soapAction="http://tempuri.org/IService1/DelZayavka" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdZayavka">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdZayavka" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllUsluga">
+      <soap:operation soapAction="http://tempuri.org/IService1/AllUsluga" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsluga">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetUsluga" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsUsluga">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsUsluga" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelUsluga">
+      <soap:operation soapAction="http://tempuri.org/IService1/DelUsluga" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdUsluga">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdUsluga" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllZayavkyUslugy">
+      <soap:operation soapAction="http://tempuri.org/IService1/AllZayavkyUslugy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetZayavkaUsluga">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetZayavkaUsluga" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsZayavkaUsluga">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsZayavkaUsluga" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/WcfServiceLibrary1/Service1/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

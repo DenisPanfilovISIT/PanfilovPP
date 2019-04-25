@@ -1,0 +1,373 @@
+﻿<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <Action s:mustUnderstand="1" xmlns="http://schemas.microsoft.com/ws/2005/05/addressing/none">http://tempuri.org/IService1/AllClients</Action>
+  </s:Header>
+  <s:Body>
+    <AllClients xmlns="http://tempuri.org/" />
+  </s:Body>
+</s:Envelope>
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header />
+  <s:Body>
+    <AllClientsResponse xmlns="http://tempuri.org/">
+      <AllClientsResult>
+        <xs:schema id="NewDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+          <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+            <xs:complexType>
+              <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="Client">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="idClient" type="xs:int" minOccurs="0" />
+                      <xs:element name="fio" type="xs:string" minOccurs="0" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+              </xs:choice>
+            </xs:complexType>
+          </xs:element>
+        </xs:schema>
+        <diffgr:diffgram xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+          <NewDataSet xmlns="">
+            <Client diffgr:id="Client1" msdata:rowOrder="0">
+              <idClient>1</idClient>
+              <fio>Панфилов Денис Игоревич</fio>
+            </Client>
+            <Client diffgr:id="Client2" msdata:rowOrder="1">
+              <idClient>2</idClient>
+              <fio>Кубарь Александр Сергеевич</fio>
+            </Client>
+            <Client diffgr:id="Client3" msdata:rowOrder="2">
+              <idClient>3</idClient>
+              <fio>Жилин Даниил Игоревич</fio>
+            </Client>
+          </NewDataSet>
+        </diffgr:diffgram>
+      </AllClientsResult>
+    </AllClientsResponse>
+  </s:Body>
+</s:Envelope>
+
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <Action s:mustUnderstand="1" xmlns="http://schemas.microsoft.com/ws/2005/05/addressing/none">http://tempuri.org/IService1/GetClient</Action>
+  </s:Header>
+  <s:Body>
+    <GetClient xmlns="http://tempuri.org/">
+      <idClient>3</idClient>
+    </GetClient>
+  </s:Body>
+</s:Envelope>
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header />
+  <s:Body>
+    <GetClientResponse xmlns="http://tempuri.org/">
+      <GetClientResult>
+        <xs:schema id="NewDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+          <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+            <xs:complexType>
+              <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="Table1">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="idClient" type="xs:string" minOccurs="0" />
+                      <xs:element name="fio" type="xs:string" minOccurs="0" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+              </xs:choice>
+            </xs:complexType>
+          </xs:element>
+        </xs:schema>
+        <diffgr:diffgram xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+          <NewDataSet xmlns="">
+            <Table1 diffgr:id="Table11" msdata:rowOrder="0" diffgr:hasChanges="inserted">
+              <idClient>3</idClient>
+              <fio>Жилин Даниил Игоревич</fio>
+            </Table1>
+          </NewDataSet>
+        </diffgr:diffgram>
+      </GetClientResult>
+    </GetClientResponse>
+  </s:Body>
+</s:Envelope>
+
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <Action s:mustUnderstand="1" xmlns="http://schemas.microsoft.com/ws/2005/05/addressing/none">http://tempuri.org/IService1/InsClient</Action>
+  </s:Header>
+  <s:Body>
+    <InsClient xmlns="http://tempuri.org/">
+      <fio>Морева Анастасия Олеговна</fio>
+    </InsClient>
+  </s:Body>
+</s:Envelope>
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header />
+  <s:Body>
+    <InsClientResponse xmlns="http://tempuri.org/">
+      <InsClientResult>Id добавленного клиента: 4</InsClientResult>
+    </InsClientResponse>
+  </s:Body>
+</s:Envelope>
+
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <Action s:mustUnderstand="1" xmlns="http://schemas.microsoft.com/ws/2005/05/addressing/none">http://tempuri.org/IService1/DelClient</Action>
+  </s:Header>
+  <s:Body>
+    <DelClient xmlns="http://tempuri.org/">
+      <idClient>4</idClient>
+    </DelClient>
+  </s:Body>
+</s:Envelope>
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header />
+  <s:Body>
+    <DelClientResponse xmlns="http://tempuri.org/">
+      <DelClientResult>Клиент удален</DelClientResult>
+    </DelClientResponse>
+  </s:Body>
+</s:Envelope>
+
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <Action s:mustUnderstand="1" xmlns="http://schemas.microsoft.com/ws/2005/05/addressing/none">http://tempuri.org/IService1/UpdClient</Action>
+  </s:Header>
+  <s:Body>
+    <UpdClient xmlns="http://tempuri.org/">
+      <idClient>1</idClient>
+      <fio>Панфилова Кристина Игоревна</fio>
+    </UpdClient>
+  </s:Body>
+</s:Envelope>
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header />
+  <s:Body>
+    <UpdClientResponse xmlns="http://tempuri.org/">
+      <UpdClientResult>Клиент 1 обновлен</UpdClientResult>
+    </UpdClientResponse>
+  </s:Body>
+</s:Envelope>
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <Action s:mustUnderstand="1" xmlns="http://schemas.microsoft.com/ws/2005/05/addressing/none">http://tempuri.org/IService1/UpdClient</Action>
+  </s:Header>
+  <s:Body>
+    <UpdClient xmlns="http://tempuri.org/">
+      <idClient>1</idClient>
+      <fio>Панфилов Денис Игоревич</fio>
+    </UpdClient>
+  </s:Body>
+</s:Envelope>
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header />
+  <s:Body>
+    <UpdClientResponse xmlns="http://tempuri.org/">
+      <UpdClientResult>Клиент 1 обновлен</UpdClientResult>
+    </UpdClientResponse>
+  </s:Body>
+</s:Envelope>
+
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <Action s:mustUnderstand="1" xmlns="http://schemas.microsoft.com/ws/2005/05/addressing/none">http://tempuri.org/IService1/AllZayavky</Action>
+  </s:Header>
+  <s:Body>
+    <AllZayavky xmlns="http://tempuri.org/" />
+  </s:Body>
+</s:Envelope>
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header />
+  <s:Body>
+    <AllZayavkyResponse xmlns="http://tempuri.org/">
+      <AllZayavkyResult>
+        <xs:schema id="NewDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+          <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+            <xs:complexType>
+              <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="Zayavka">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="idZayavka" type="xs:int" minOccurs="0" />
+                      <xs:element name="fio" type="xs:string" minOccurs="0" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+              </xs:choice>
+            </xs:complexType>
+          </xs:element>
+        </xs:schema>
+        <diffgr:diffgram xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+          <NewDataSet xmlns="">
+            <Zayavka diffgr:id="Zayavka1" msdata:rowOrder="0">
+              <idZayavka>1</idZayavka>
+              <fio>Панфилов Денис Игоревич</fio>
+            </Zayavka>
+            <Zayavka diffgr:id="Zayavka2" msdata:rowOrder="1">
+              <idZayavka>2</idZayavka>
+              <fio>Кубарь Александр Сергеевич</fio>
+            </Zayavka>
+            <Zayavka diffgr:id="Zayavka3" msdata:rowOrder="2">
+              <idZayavka>3</idZayavka>
+              <fio>Жилин Даниил Игоревич</fio>
+            </Zayavka>
+          </NewDataSet>
+        </diffgr:diffgram>
+      </AllZayavkyResult>
+    </AllZayavkyResponse>
+  </s:Body>
+</s:Envelope>
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <Action s:mustUnderstand="1" xmlns="http://schemas.microsoft.com/ws/2005/05/addressing/none">http://tempuri.org/IService1/AllUsluga</Action>
+  </s:Header>
+  <s:Body>
+    <AllUsluga xmlns="http://tempuri.org/" />
+  </s:Body>
+</s:Envelope>
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header />
+  <s:Body>
+    <AllUslugaResponse xmlns="http://tempuri.org/">
+      <AllUslugaResult>
+        <xs:schema id="NewDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+          <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+            <xs:complexType>
+              <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="Usluga">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="idUsluga" type="xs:int" minOccurs="0" />
+                      <xs:element name="nazvanie" type="xs:string" minOccurs="0" />
+                      <xs:element name="cena" type="xs:int" minOccurs="0" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+              </xs:choice>
+            </xs:complexType>
+          </xs:element>
+        </xs:schema>
+        <diffgr:diffgram xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+          <NewDataSet xmlns="">
+            <Usluga diffgr:id="Usluga1" msdata:rowOrder="0">
+              <idUsluga>1</idUsluga>
+              <nazvanie>бассейн</nazvanie>
+              <cena>500</cena>
+            </Usluga>
+            <Usluga diffgr:id="Usluga2" msdata:rowOrder="1">
+              <idUsluga>2</idUsluga>
+              <nazvanie>массаж</nazvanie>
+              <cena>350</cena>
+            </Usluga>
+            <Usluga diffgr:id="Usluga3" msdata:rowOrder="2">
+              <idUsluga>3</idUsluga>
+              <nazvanie>зал</nazvanie>
+              <cena>600</cena>
+            </Usluga>
+            <Usluga diffgr:id="Usluga4" msdata:rowOrder="3">
+              <idUsluga>4</idUsluga>
+              <nazvanie>обед</nazvanie>
+              <cena>450</cena>
+            </Usluga>
+            <Usluga diffgr:id="Usluga5" msdata:rowOrder="4">
+              <idUsluga>5</idUsluga>
+              <nazvanie>охота</nazvanie>
+              <cena>900</cena>
+            </Usluga>
+          </NewDataSet>
+        </diffgr:diffgram>
+      </AllUslugaResult>
+    </AllUslugaResponse>
+  </s:Body>
+</s:Envelope>
+
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <Action s:mustUnderstand="1" xmlns="http://schemas.microsoft.com/ws/2005/05/addressing/none">http://tempuri.org/IService1/InsUsluga</Action>
+  </s:Header>
+  <s:Body>
+    <InsUsluga xmlns="http://tempuri.org/">
+      <nazvanie>почистить обувь</nazvanie>
+      <cena>900</cena>
+    </InsUsluga>
+  </s:Body>
+</s:Envelope>
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header />
+  <s:Body>
+    <InsUslugaResponse xmlns="http://tempuri.org/">
+      <InsUslugaResult>Id добавленной услуги: 6</InsUslugaResult>
+    </InsUslugaResponse>
+  </s:Body>
+</s:Envelope>
+
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <Action s:mustUnderstand="1" xmlns="http://schemas.microsoft.com/ws/2005/05/addressing/none">http://tempuri.org/IService1/AllOredersUsluga</Action>
+  </s:Header>
+  <s:Body>
+    <AllZayavkyUslugy xmlns="http://tempuri.org/" />
+  </s:Body>
+</s:Envelope>
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header />
+  <s:Body>
+    <AllZayavkyUslugyResponse xmlns="http://tempuri.org/">
+      <AllZayavkyUslugyResult>
+        <xs:schema id="NewDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+          <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+            <xs:complexType>
+              <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="Zayavka_Usluga">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="nazvanie" type="xs:string" minOccurs="0" />
+                      <xs:element name="fio" type="xs:string" minOccurs="0" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+              </xs:choice>
+            </xs:complexType>
+          </xs:element>
+        </xs:schema>
+        <diffgr:diffgram xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+          <NewDataSet xmlns="">
+            <Zayavka_Usluga diffgr:id="Oreders_Usluga1" msdata:rowOrder="0">
+              <nazvanie>бассейн</nazvanie>
+              <fio>Панфилов Денис Игоревич</fio>
+            </Zayavka_Usluga>
+            <Zayavka_Usluga diffgr:id="Oreders_Usluga2" msdata:rowOrder="1">
+              <nazvanie>массаж</nazvanie>
+              <fio>Кубарь Александр Сергеевич</fio>
+            </Zayavka_Usluga>
+            <Zayavka_Usluga diffgr:id="Oreders_Usluga3" msdata:rowOrder="2">
+              <nazvanie>охота</nazvanie>
+              <fio>Жилин ДАниил Игоревич</fio>
+            </Zayavka_Usluga>
+          </NewDataSet>
+        </diffgr:diffgram>
+      </AllZayavkyUslugyResult>
+    </AllZayavkyUslugyResponse>
+  </s:Body>
+</s:Envelope>
+
